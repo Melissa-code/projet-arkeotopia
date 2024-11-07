@@ -63,6 +63,64 @@ mo-dashboard {
       }
     }
 
+    /* Melissa-code */
+    #monuments-list {
+      color: white;
+      list-style: none;
+    }
+
+    .monuments-container {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;    
+      width: 100%;        
+      box-sizing: border-box; 
+    }
+
+    .monument-card {
+      width: 400px;          
+      background-color: $lightGrey; 
+      border-radius: 5px;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+      color: white;
+      margin: 0.2rem 0;   
+    }
+
+    .monument-card-header {
+      display: flex;
+      justify-content: space-between;  
+      align-items: center;          
+    }
+
+    .monument-card-header strong {
+      font-size: 1rem;
+      font-weight: bold;
+      flex-grow: 1;             
+    }
+
+    button {
+      background-color: $darkRed;
+      color: white;
+      border: none;
+      padding: 5px 5px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: $darkGrey;
+    }
+
+    .monument-description {
+      display: none; 
+      font-size: 0.9rem;
+      color: white
+    }
+        
     .hero__hext {
       color: white;
       max-width: 600px;
@@ -97,11 +155,24 @@ mo-dashboard {
       }
     }
 
+    .counter-container {
+      margin-top: 1rem;
+      color: white;
+      background-color: $lightGrey;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
     .hero__or {
       margin-top: 60px;
       margin-bottom: 10px;
     }
   }
+
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }  
 
   .dashboard {
     width: 980px;

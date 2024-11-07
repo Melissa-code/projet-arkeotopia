@@ -2,20 +2,29 @@
   <img src="assets/images/wlm-logo.png" alt="Wiki Loves Monuments logo" />
   <div class="hero__search">
     <md-autocomplete
-      md-selected-item="$ctrl.selectedItem"
-      md-search-text="$ctrl.searchText"
-      md-items="item in $ctrl.getMatches($ctrl.searchText)"
-      md-item-text="item.name"
-      md-selected-item-change="$ctrl.goToMap()"
-      placeholder="Search for city, address or monument"
+        md-selected-item="$ctrl.selectedItem"
+        md-search-text="$ctrl.searchText"
+        md-items="item in $ctrl.getMatches($ctrl.searchText)"
+        md-item-text="item.name"
+        md-selected-item-change="$ctrl.goToMap()"
+        placeholder="Search for city, address or monument"
     >
-      <md-item-template>
-        {{item.name}}
-        <small class="muted">{{item.details}}</small>
-      </md-item-template>
-      <md-not-found> No matches found. </md-not-found>
+        <md-item-template>
+            {{item.name}}
+            <small class="muted">{{item.details}}</small>
+        </md-item-template>
+        <md-not-found>No matches found.</md-not-found>
     </md-autocomplete>
-  </div>
+
+    <!-- Monuments list -->
+    <div class="monuments-container" id="monuments-list"></div>
+      <!-- results -->
+    </div>
+
+</div>
+
+
+
   <div class="hero__countries">
     <h4><a ui-sref="main.map({c:'49.4967:12.4805:4'})">or go to the map</a></h4>
     <div class="hero__or">jump to country</div>
@@ -24,7 +33,7 @@
       layout-align="center center"
       layout-xs="column"
       layout-align-xs="start center"
-    >
+      class="countriesList">
       <h4><a ui-sref="main.country({country: 'france'})">France</a></h4>
       <span hide-xs>&nbsp;·&nbsp;</span>
       <h4><a ui-sref="main.country({country: 'ireland'})">Ireland</a></h4>
@@ -37,6 +46,11 @@
       <span hide-xs>&nbsp;·&nbsp;</span>
       <h4><a ui-sref="main.country({country: 'us'})">USA</a></h4>
     </div>
+  </div>
+  <!-- counter -->
+  <div class="counter-container" layout="column" layout-align="center center">
+    <div id="counter"></div>
+    <div id="numberOfCountries"></div>
   </div>
 </div>
 <div

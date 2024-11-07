@@ -10,3 +10,14 @@ npm run start
 cd monumental/static/
 python -m SimpleHTTPServer
 ```
+
+
+Or 
+```
+nvm use 12
+yarn install
+yarn run start
+
+cd monumental/static/
+python -m http.server
+```
